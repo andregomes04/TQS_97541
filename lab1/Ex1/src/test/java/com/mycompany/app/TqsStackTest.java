@@ -1,13 +1,19 @@
 package com.mycompany.app;
 
+import java.util.NoSuchElementException;
+import java.util.logging.Logger;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class TqsStackTest 
-{
-   
+public class TqsStackTest {
+    private TqsStack<Integer> stack;
+
+
     @DisplayName("A stack is empty on construction")
     @Test
     void EmptyStack() {
@@ -23,7 +29,7 @@ public class TqsStackTest
     @DisplayName("After n pushes to an empty stack, n > 0, the stack is not empty and its size is n")
     @Test
     void StackSizeN() {
-        for(i=0;i<5;i++){ // tested for n = 5
+        for(int i=0;i<5;i++){ // tested for n = 5
             stack.push(i);
         }
         assertEquals(5,stack.size());
@@ -51,24 +57,30 @@ public class TqsStackTest
     @DisplayName("If the size is n, then after n pops, the stack is empty and has a size 0")
     @Test
     void StackNPops() {
-        for(i=0;i<5;i++){
+        for(int i=0;i<5;i++){
             stack.push(i);
         }
-        for(k=0;k<stack.size();k++){
+        for(int k=0;k<stack.size();k++){
             stack.pop();
         }
-        assertTrue(stack.isEmpty);
+        assertTrue(stack.isEmpty());
         assertEquals(0,stack.size());
     }
     
 
     @DisplayName("Popping from an empty stack does throw a NoSuchElementException")
     @Test
+    void PopEmpty(){
+        Assertions.assertThrows(NoSuchElementException.class, () -> {
+            stack.pop();
+        });
+    }
 
     @DisplayName("Peeking into an empty stack does throw a NoSuchElementException")
     @Test
-
-    @DisplayName("For bounded stacks only:pushing onto a full stack does throw an IllegalStateException")
-    @Test
-
+    void PeekEmpty() {
+        Assertions.assertThrows(NoSuchElementException.class, () -> {
+            stack.peek();
+        });
+    }
 }
