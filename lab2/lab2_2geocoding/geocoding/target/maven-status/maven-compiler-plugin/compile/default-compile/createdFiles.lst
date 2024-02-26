@@ -1,0 +1,5 @@
+tqs/geo/ISimpleHttpClient.class
+tqs/geo/Address.class
+tqs/geo/AddressResolverService.class
+tqs/geo/ConfigUtils.class
+tqs/geo/TqsBasicHttpClient.class
