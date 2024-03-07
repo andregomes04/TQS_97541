@@ -2,24 +2,22 @@ package tqs.lab4;
 
 import org.slf4j.Logger;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import static java.lang.invoke.MethodHandles.lookup;
 import static org.slf4j.LoggerFactory.getLogger;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.seljup.SeleniumJupiter;
 
+@ExtendWith(SeleniumJupiter.class)
 class HelloWorldTest {
 
     static final Logger log = getLogger(lookup().lookupClass());
 
-    private WebDriver driver; 
+    /*private WebDriver driver; 
 
     @BeforeAll
     static void setupClass() {
@@ -30,9 +28,10 @@ class HelloWorldTest {
     void setup() {
         driver = new ChromeDriver(); 
     }
+    */
 
     @Test
-    void test() {
+    void test(ChromeDriver driver) {
         // Exercise
         String sutUrl = "https://www.ultimate-guitar.com/explore";
         driver.get(sutUrl); 
@@ -43,9 +42,11 @@ class HelloWorldTest {
         assertThat(title).isEqualTo("Explore chords and tabs @ Ultimate-Guitar.Com"); 
     }
 
+    /* 
     @AfterEach
     void teardown() {
         driver.quit(); 
     }
+    */
 
 }
