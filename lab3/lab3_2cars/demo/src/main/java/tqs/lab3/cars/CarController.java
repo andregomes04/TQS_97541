@@ -24,12 +24,12 @@ public class CarController {
         return new ResponseEntity<Car> (CarManagerService.save(car), HttpStatus.CREATED);
     }
 
-     @GetMapping("/GetAllCars")
+    @GetMapping("/GetAllCars")
     public List<Car> getAllCars(){
         return CarManagerService.getAllCars();
     }
 
-    @GetMapping("/GetCar")
+    @GetMapping("/GetCar/{id}")
     public ResponseEntity<Car> GetCarById(@PathVariable long id){
         return ResponseEntity.of(CarManagerService.getCarDetails(id));
     }

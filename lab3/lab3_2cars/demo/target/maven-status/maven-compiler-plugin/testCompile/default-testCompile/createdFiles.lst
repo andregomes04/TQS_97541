@@ -1,2 +1,6 @@
 tqs/lab3/cars/JsonUtils.class
 tqs/lab3/cars/CarControllerTest.class
+tqs/lab3/cars/ApiTestIT$1.class
+tqs/lab3/cars/CarServiceTest.class
+tqs/lab3/cars/ApiTestIT.class
+tqs/lab3/cars/CarRepositoryTest.class

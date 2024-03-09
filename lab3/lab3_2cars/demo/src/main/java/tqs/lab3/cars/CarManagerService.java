@@ -8,14 +8,18 @@ public class CarManagerService {
     private CarRepository carRepository;
 
     public Car save(Car car){
-        return null;
+        return carRepository.save(car);
     }
 
     public List<Car> getAllCars(){
-        return null;
+        return carRepository.findAll();
     }
 
     public Optional<Car> getCarDetails(Long id){
-        return null;
+        Car car = carRepository.findByCarId(id);
+        if (car != null)
+            return Optional.of(car);
+
+        return Optional.empty();
     }
 }

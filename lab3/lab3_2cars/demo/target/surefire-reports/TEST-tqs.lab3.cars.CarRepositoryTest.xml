@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tqs.lab3.cars.CarControllerTest" time="0.772" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tqs.lab3.cars.CarRepositoryTest" time="2.476" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -56,10 +56,10 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="GetCarTest" classname="tqs.lab3.cars.CarControllerTest" time="0.109">
-    <system-out><![CDATA[2024-03-09T17:03:06.402Z  INFO 7921 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [tqs.lab3.cars.CarControllerTest]: CarControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-03-09T17:03:06.436Z  INFO 7921 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration tqs.lab3.cars.CarserviceApplication for test class tqs.lab3.cars.CarControllerTest
-2024-03-09T17:03:06.443Z  INFO 7921 --- [           main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+  <testcase name="testAllCars" classname="tqs.lab3.cars.CarRepositoryTest" time="0.119">
+    <system-out><![CDATA[17:03:04.040 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [tqs.lab3.cars.CarRepositoryTest]: CarRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:03:04.138 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration tqs.lab3.cars.CarserviceApplication for test class tqs.lab3.cars.CarRepositoryTest
+17:03:04.212 [main] INFO org.springframework.boot.devtools.restart.RestartApplicationListener -- Restart disabled due to context in which it is running
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -69,15 +69,39 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.3)
 
-2024-03-09T17:03:06.476Z  INFO 7921 --- [           main] tqs.lab3.cars.CarControllerTest          : Starting CarControllerTest using Java 17.0.6 with PID 7921 (started by andregomes04 in /home/andregomes04/TQS_97541/lab3/lab3_2cars/demo)
-2024-03-09T17:03:06.477Z  INFO 7921 --- [           main] tqs.lab3.cars.CarControllerTest          : No active profile set, falling back to 1 default profile: "default"
-2024-03-09T17:03:07.007Z  INFO 7921 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-03-09T17:03:07.008Z  INFO 7921 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-03-09T17:03:07.010Z  INFO 7921 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2024-03-09T17:03:07.021Z  INFO 7921 --- [           main] tqs.lab3.cars.CarControllerTest          : Started CarControllerTest in 0.578 seconds (process running for 4.542)
+2024-03-09T17:03:04.420Z  INFO 7921 --- [           main] tqs.lab3.cars.CarRepositoryTest          : Starting CarRepositoryTest using Java 17.0.6 with PID 7921 (started by andregomes04 in /home/andregomes04/TQS_97541/lab3/lab3_2cars/demo)
+2024-03-09T17:03:04.421Z  INFO 7921 --- [           main] tqs.lab3.cars.CarRepositoryTest          : No active profile set, falling back to 1 default profile: "default"
+2024-03-09T17:03:04.707Z  INFO 7921 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-03-09T17:03:04.745Z  INFO 7921 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interface.
+2024-03-09T17:03:04.798Z  INFO 7921 --- [           main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2024-03-09T17:03:04.926Z  INFO 7921 --- [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:2456faf5-3af6-46f9-8589-2de02f572bfb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-03-09T17:03:05.126Z  INFO 7921 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-03-09T17:03:05.175Z  INFO 7921 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-03-09T17:03:05.204Z  INFO 7921 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-03-09T17:03:05.296Z  INFO 7921 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-03-09T17:03:05.871Z  INFO 7921 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: drop table if exists car cascade 
+Hibernate: drop sequence if exists car_seq
+Hibernate: create sequence car_seq start with 1 increment by 50
+Hibernate: create table car (car_id bigint not null, maker varchar(255), model varchar(255), primary key (car_id))
+2024-03-09T17:03:05.898Z  INFO 7921 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-03-09T17:03:06.226Z  INFO 7921 --- [           main] tqs.lab3.cars.CarRepositoryTest          : Started CarRepositoryTest in 2.034 seconds (process running for 3.746)
+Hibernate: select next value for car_seq
+Hibernate: select next value for car_seq
+Hibernate: insert into car (maker,model,car_id) values (?,?,?)
+Hibernate: insert into car (maker,model,car_id) values (?,?,?)
+Hibernate: insert into car (maker,model,car_id) values (?,?,?)
+Hibernate: insert into car (maker,model,car_id) values (?,?,?)
+Hibernate: select c1_0.car_id,c1_0.maker,c1_0.model from car c1_0
 ]]></system-out>
   </testcase>
-  <testcase name="CreateCarTest" classname="tqs.lab3.cars.CarControllerTest" time="0.011"/>
-  <testcase name="GetNonExistingCarTest" classname="tqs.lab3.cars.CarControllerTest" time="0.004"/>
-  <testcase name="givenManyCars_whenGetCars_thenReturnJsonArray" classname="tqs.lab3.cars.CarControllerTest" time="0.01"/>
+  <testcase name="testValidCarId" classname="tqs.lab3.cars.CarRepositoryTest" time="0.025">
+    <system-out><![CDATA[Hibernate: insert into car (maker,model,car_id) values (?,?,?)
+Hibernate: select c1_0.car_id,c1_0.maker,c1_0.model from car c1_0 where c1_0.car_id=?
+]]></system-out>
+  </testcase>
+  <testcase name="testInvalidCarId" classname="tqs.lab3.cars.CarRepositoryTest" time="0.008">
+    <system-out><![CDATA[Hibernate: select c1_0.car_id,c1_0.maker,c1_0.model from car c1_0 where c1_0.car_id=?
+]]></system-out>
+  </testcase>
 </testsuite>
