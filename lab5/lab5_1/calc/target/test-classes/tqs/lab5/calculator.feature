@@ -28,3 +28,4 @@ Feature: Basic Arithmetic
     | a | b | c  |
     | 1 | 2 | 3  |
     | 3 | 7 | 10 |
+    | 8 | 8 | 16 |
