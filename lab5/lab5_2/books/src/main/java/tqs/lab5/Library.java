@@ -21,6 +21,13 @@ public class Library {
  
 		return store.stream().filter(book -> {
 			return from.before(book.getPublished()) && end.getTime().after(book.getPublished());
-		}).sorted(Comparator.comparing(Book::getPublished).reversed()).collect(Collectors.toList());
+		}).sorted(Comparator.comparing(Book::getPublished)).collect(Collectors.toList());
+	}
+
+	public List<Book> findBooksbyTitle(final String title){
+		return store.stream().filter(book -> {
+            return book.getTitle().equals(title);
+        }).sorted(Comparator.comparing(Book::getPublished).reversed()).collect(Collectors.toList());
+
 	}
 }
