@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: CucumberTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.989 s <<< FAILURE! - in CucumberTest
+Booking a trip from one city to another  Time elapsed: 1.907 s  <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+
