@@ -3,8 +3,8 @@ package tqs.lab5;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -24,7 +24,7 @@ public class FlightSteps {
 
     @When("I navigate to {string}")
     public void iNavigateTo(String url) {
-        driver = WebDriverManager.chromedriver().create();
+        driver = new ChromeDriver();
         driver.get(url);
     }
 
