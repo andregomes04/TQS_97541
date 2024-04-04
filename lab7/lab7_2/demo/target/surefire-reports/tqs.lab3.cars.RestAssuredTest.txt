@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: tqs.lab3.cars.RestAssuredTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.110 s <<< FAILURE! -- in tqs.lab3.cars.RestAssuredTest
+tqs.lab3.cars.RestAssuredTest.testCreateCar -- Time elapsed: 0.050 s <<< FAILURE!
+Argument(s) are different! Wanted:
+tqs.lab3.cars.CarManagerService#0 bean.save(
+    Car Id: 0 ; Model: fiesta ; Maker: ford;
+);
+-> at tqs.lab3.cars.CarManagerService.save(CarManagerService.java:11)
+Actual invocations have different arguments:
+tqs.lab3.cars.CarManagerService#0 bean.save(
+    Car Id: 0 ; Model: null ; Maker: null;
+);
+-> at tqs.lab3.cars.CarController.createCar(CarController.java:24)
+
+	at tqs.lab3.cars.CarManagerService.save(CarManagerService.java:11)
+	at tqs.lab3.cars.RestAssuredTest.testCreateCar(RestAssuredTest.java:39)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
